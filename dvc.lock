@@ -1,0 +1,17 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python scripts/data.py
+    deps:
+    - path: scripts/data.py
+      hash: md5
+      md5: c8151a2f0c88c8c3c11986039320af32
+      size: 1474
+    params:
+      params.yaml:
+        index_col: customer_id
+    outs:
+    - path: data/initial_data.csv
+      hash: md5
+      md5: 271ee7ef5417ba920175311fcbe6a6b8
+      size: 826283
